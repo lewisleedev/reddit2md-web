@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="main-output" id="md-result" contenteditable="false">
+        <p class="about-title"># reddit2md</p>
+        <p>Turn any selftext posts to markdown... That's it.</p>
+        <p class="about-title">## About</p>
+        <p>reddit2md turns your favorite reddit posts to markdown... That's pretty much it.</p>
+        <p class="about-title">## Why?</p>
+        <p>Printing or archiving.</p>
+        <p class="about-title">## Why is this so slow?</p>
+        <p>Because a) praw is not that fast and b) this is poorly coded. Keep in mind that longer posts will take significantly more time.</p>
+        <p class="about-title">## Any known issues?</p>
+        <p>Multi-line HTML code blocks won't be converted properly. No, this issue will not be fixed as it would take significantly longer conversion time to do so.</p>
+        <p class="about-title">## It doesn't work / Something's wrong with the website</p>
+        <p>Please let me know the issue in <a href="https://github.com/lewisleedev/reddit2md/issues" class="about-link">Issues page</a>.</p>
+        
+    </div>
+    <button id="copy-btn" type="button" onclick="copyToClipboard('md-result')">Copy to clipboard</button>
+    <button id="download-btn" href="#" type="button" onclick='downloadInnerHtml("reddit2md.md", "md-result", "text/plain");'>Save as .md</button>
+{% endblock %}

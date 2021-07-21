@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="main-output" id="md-result" contenteditable="true">
+        <p># [{{ title }}]({{ post_url }})</p>
+        {% for line in selftext %}
+        <p>{{ line }}</p>
+        {% endfor %}
+        <p>---</p>
+        <p>Written by [u/{{ author }}]({{ author_url }}) on [r/{{ subreddit }}]({{ subreddit_url }})</p>
+        <p>Created in {{ created_date }}(UTC)</p>
+    </div>
+    <button id="copy-btn" type="button" onclick="copyToClipboard('md-result')">Copy to clipboard</button>
+    <button href="#" id="download-btn" type="button" onclick='downloadInnerHtml("{{ title }} by u/{{ author }}.md", "md-result", "text/plain");'>Save as .md</button>
+{% endblock %}

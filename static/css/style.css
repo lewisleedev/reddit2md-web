@@ -1,0 +1,128 @@
+:root {
+    --bg:#171332;
+    --primary:#2a5d67;
+    --secondary:#167a8b;
+    --text-primary: #fff;
+    --text-secondary: #fff;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Sans';
+}
+
+.page-wrapper{
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.upper-main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+input, label {
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.mainpage-wrapper{
+    width: 40%;
+    height: auto;
+    margin: auto;
+}
+
+.main-form{
+    margin: 10px auto 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.main-output{
+    margin: 10px auto;
+    color: black;
+    background: #fff;
+    max-height: 500px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.main-title{
+    margin-bottom: 5px;
+}
+
+.main-title a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+#input-url{
+    width: 70%;
+}
+
+#submit-btn {
+    background: var(--primary);
+    color: var(--text-secondary);
+    padding: 5px 10px;
+    box-shadow: none;
+    border: none;
+}
+
+#submit-btn:hover{
+    background: var(--secondary);
+}
+
+#copy-btn {
+    background: var(--primary);
+    color: var(--text-secondary);
+    padding: 5px 10px;
+    box-shadow: none;
+    border: none;
+    width: 10em;
+}
+
+#copy-btn:hover{
+    background: var(--secondary);
+}
+
+#download-btn {
+    background: var(--primary);
+    color: var(--text-secondary);
+    padding: 5px 10px;
+    box-shadow: none;
+    border: none;
+    width: 8em;
+}
+
+#download-btn:hover{
+    background: var(--secondary);
+}
+
+.about-title {
+    font-weight: bold;
+}
+
+.footer-p{
+    display: block;
+    margin-top: 10px;
+}
+
+.footer-a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.error-h1{
+    margin-bottom: 0.5em;
+}

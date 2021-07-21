@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>reddit2md - Simple Reddit to Markdown converter.</title>
+  <meta name="description" content="Simple reddit to markdown converter.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="upper-main">
+      <div class="mainpage-wrapper">
+        <h1 class="main-title"><a href="/">reddit2md</a></h1>
+        <p class="subtitle">Turn any selftext posts to markdown... That's it.</p>
+        <div class="main-form-div">
+            <form id="main-form" class="main-form" action = "{{ url_for('r2m') }}" method = "POST">
+                <label for="url">Post URL</label>
+                <input id = "input-url" type = "text" name = "url" required/>
+                <input id = "submit-btn" type = "submit" value = "submit">
+            </form>
+        </div>
+        {% block content %}
+        {% endblock %}
+        <p class="footer-p"><a class="footer-a" href="https://github.com/lewisleedev">@lewisleedev</a> / <a href="https://github.com/lewisleedev/reddit2md/issues" class="footer-a">Github Issues</a></p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/static/js/main.js"></script>
+</body>
+</html>
